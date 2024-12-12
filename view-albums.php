@@ -3,7 +3,7 @@
 <h1>Albums</h1>
   </div>
   <div class="col-auto">
-<?php>
+<?php
 include "view-albums-newform.php";
 ?>
   </div>
