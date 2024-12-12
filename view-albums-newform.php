@@ -24,6 +24,7 @@
             <label for="aName" class="form-label">Album Name</label>
             <input type="text" class="form-control" id="aName" name="aName">
           </div>
+            <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
       </div>
