@@ -16,7 +16,7 @@ function selectAlbums() {
 function insertAlbums($aNumber, $aName) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `album` (`album_number`, `album_name`) VALUES (?, ?)";
+        $stmt = $conn->prepare("INSERT INTO `album` (`album_number`, `album_name`) VALUES (?, ?)");
         $stmt->bind_param("ss", $aNumber, $aName);
         $success = $stmt->execute();
         $conn->close();
