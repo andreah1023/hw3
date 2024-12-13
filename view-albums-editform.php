@@ -18,13 +18,13 @@
         <form method="post" action="">
           <div class="mb-3">
             <label for="aNumber<?php echo $album['album_id']; ?>" class="form-label">Album Number</label>
-            <input type="text" class="form-control" id="aNumber<?php echo $album['album_id']; ?>" name="aNumber"> value ="<?php echo $album['album_number']; ?>">
+            <input type="text" class="form-control" id="aNumber<?php echo $album['album_id']; ?>" name="aNumber" value ="<?php echo $album['album_number']; ?>">
           </div>
           <div class="mb-3">
             <label for="aName<?php echo $album['album_id']; ?>" class="form-label">Album Name</label>
-            <input type="text" class="form-control" id="aName<?php echo $album['album_id']; ?>" name="aName"> value = "<?php echo $album['album_name']; ?>">
+            <input type="text" class="form-control" id="aName<?php echo $album['album_id']; ?>" name="aName" value = "<?php echo $album['album_name']; ?>">
           </div>
-            <input type="hidden" name="aid"> value = "<?php echo $album['album_id']; ?>">
+            <input type="hidden" name="aid" value = "<?php echo $album['album_id']; ?>">
             <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
