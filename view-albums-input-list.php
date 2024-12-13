@@ -1,4 +1,4 @@
-<select class="form-select" id="" name= "">
+<select class="form-select" id="alid" name= "aName">
  <?php
 while ($hospitalItem = $hospitalList->fetch_assoc()) {
   ?>
