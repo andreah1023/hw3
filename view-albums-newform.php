@@ -19,15 +19,15 @@
           <div class="mb-3">
             <label for="aNumber" class="form-label">Album Number</label>
             <input type="text" class="form-control" id="aNumber" name="aNumber">
-          </div>
-          <div class="mb-3">
-            <label for="aName" class="form-label">Album Name</label>
 
-               <?php 
+    <?php 
        $albumslist = selectAlbumsForInput();
        include "view-albums-input-list.php";
 
        ?>
+          </div>
+          <div class="mb-3">
+            <label for="aName" class="form-label">Album Name</label>
             <input type="text" class="form-control" id="aName" name="aName">
           </div>
             
