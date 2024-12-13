@@ -13,6 +13,35 @@ function selectAlbums() {
     }
 }
 
+function selectArtistsForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT artist_id, artist_name FROM `artist` order by artist_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function selectAlbumsForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT album_id, album_name FROM `album` order by album_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+
 function insertAlbums($aNumber, $aName) {
     try {
         $conn = get_db_connection();
