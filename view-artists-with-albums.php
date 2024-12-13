@@ -1,4 +1,4 @@
-<div class="container-fluid" style="background: url('https://via.placeholder.com/1600x900') no-repeat center center; background-size: cover; padding: 40px; min-height: 100vh;">
+<div class="container-fluid" style="background: url('https://via.placeholder.com') no-repeat center center; background-size: cover; padding: 40px; min-height: 100vh;">
   <h1 style="color: #ffffff; text-align: center; font-weight: bold; margin-bottom: 30px;">Artists with Albums</h1>
   <div class="card-group">
     <?php while ($artist = $artists->fetch_assoc()) { ?>
