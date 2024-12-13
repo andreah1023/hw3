@@ -1,4 +1,4 @@
-<select class="form-select" id="alid" name= "aName">
+<select class="form-select" id="aNumber" name= "aName">
  <?php
 while ($albumItem = $albumList->fetch_assoc()) {
   ?>
