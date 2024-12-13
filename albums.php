@@ -15,14 +15,14 @@ if (isset($_POST['actionType'])) {
       }
       break;
     case "Edit":
-      If (updateAlbums($_POST['aNumber'], $_POST['aName'], $_POST['aid'])) {
+      If (updateAlbums($_POST['aNumber'], $_POST['aName'], $_POST['alid'])) {
         echo '<div class="alert alert-success" role="alert">Album edited.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
       }
       break;
     case "Delete":
-      If (deleteAlbums($_POST['aid'])) {
+      If (deleteAlbums($_POST['alid'])) {
         echo '<div class="alert alert-success" role="alert">Album deleted.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
