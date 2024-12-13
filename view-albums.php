@@ -5,7 +5,7 @@
   <div class="col-auto">
     <?php include "view-albums-newform.php"; ?>
   </div>
-</div> 
+</div>
 
 <!-- Dropdown to filter albums -->
 <div class="row mb-3">
@@ -13,7 +13,7 @@
     <form method="get" action="">
       <label for="filter" class="form-label">Filter by Artist:</label>
       <select name="artist_id" id="filter" class="form-select" onchange="this.form.submit()">
-        <option value="">Select an Artist</option>
+        <option value="">All Artists</option>
         <?php
         // Fetch artists for the dropdown
         $artists = getArtists(); // Replace with your function to fetch artists
