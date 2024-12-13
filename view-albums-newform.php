@@ -22,8 +22,15 @@
           </div>
           <div class="mb-3">
             <label for="aName" class="form-label">Album Name</label>
+
+               <?php 
+       $albumslist = selectAlbumsForInput();
+       include "view-albums-input-list.php";
+
+       ?>
             <input type="text" class="form-control" id="aName" name="aName">
           </div>
+            
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
