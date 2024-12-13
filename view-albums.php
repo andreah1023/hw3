@@ -58,3 +58,42 @@ include "view-albums-editform.php";
     </tbody>
   </table>
 </div>
+
+<!-- Google Pie Chart -->
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Albums', 'Hits', { role: 'style' }],
+          ['ALB 3', 1, 'color: gray'],
+          ['ALB 2', 3, 'color: #76A7FA'],
+          ['1', 4, 'opacity: 0.2'],
+        ]);
+
+        var options = {
+          title: 'Albums by Hits',
+          is3D: true,
+          chartArea: {width: '70%', height: '70%'},
+          slices: {
+            0: {offset: 0.1},
+            1: {offset: 0.1},
+            2: {offset: 0.1},
+            3: {offset: 0.1},
+            4: {offset: 0.1}
+          },
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart" style="width: 400px; height: 300px; margin: 0 auto;"></div>
+  </body>
+</html>
