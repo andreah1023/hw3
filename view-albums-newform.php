@@ -19,18 +19,11 @@
           <div class="mb-3">
             <label for="aNumber" class="form-label">Album Number</label>
             <input type="text" class="form-control" id="aNumber" name="aNumber">
-
-    <?php 
-       $albumslist = selectAlbumsForInput();
-       include "view-albums-input-list.php";
-
-       ?>
           </div>
           <div class="mb-3">
             <label for="aName" class="form-label">Album Name</label>
             <input type="text" class="form-control" id="aName" name="aName">
           </div>
-            
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
