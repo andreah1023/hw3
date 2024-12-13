@@ -27,11 +27,11 @@ function insertAlbums($aNumber, $aName) {
     }
 }
 
-function updateAlbums($aNumber, $aName, $aid) {
+function updateAlbums($aNumber, $aName, $alid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `album` set `album_number` = ?, `album_name` = ? where album_id = ?");
-        $stmt->bind_param("ssi", $aNumber, $aName, $aid);
+        $stmt->bind_param("ssi", $aNumber, $aName, $alid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -41,11 +41,11 @@ function updateAlbums($aNumber, $aName, $aid) {
     }
 }
 
-function deleteAlbums($aid) {
+function deleteAlbums($alid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from album where album_id=?");
-        $stmt->bind_param("i", $aid);
+        $stmt->bind_param("i", $alid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
