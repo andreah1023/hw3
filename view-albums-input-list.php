@@ -1,8 +1,8 @@
- <select class="form-select" id="" name= "hName">
+ <select class="form-select" id="$aNumber" name= "$aNumber">
  <?php
-while ($hospitalItem = $hospitalList->fetch_assoc()) {
+while ($albumItem = $albumList->fetch_assoc()) {
   ?>
-    <option value ="<?php echo $hospitalItem['hospital_id'];?>"><?php echo $hospitalItem['hospital_name'];?></option>
+    <option value ="<?php echo $albumItem['album_id'];?>"><?php echo $albumItem['album_name'];?></option>
 
   <?php
 }
