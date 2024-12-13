@@ -25,3 +25,43 @@
     </table>
   </div>
 </div>
+
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Artists', 'Songs listed to per Day'],
+          ['SZA',     123],
+          ['Daniel Ceaser',      43],
+          ['Ariana Grande',  12],
+          ['Lizzy McAlpine', 129],
+        ]);
+
+        var options = {
+          title: 'Amount of Songs',
+          pieSliceText: 'percentage',
+          slices: {
+            0: {offset: 0.1, color: '#FFB6C1'},  
+            1: {offset: 0.1, color: '#FF69B4'},  
+            2: {offset: 0.1, color: '#ADD8E6'},  
+            3: {offset: 0.1, color: '#4682B4'}   
+          },
+          chartArea: {width: '80%', height: '80%'}, 
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart" style="width: 500px; height: 300px; margin: 0 auto;"></div>
+  </body>
+</html>
