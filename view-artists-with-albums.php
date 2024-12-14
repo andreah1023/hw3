@@ -34,7 +34,6 @@ while ($artist = $artists->fetch_assoc()) {
   </div>
 
 //new stuff
-<div
        <form method="post" action="">
        <input type="hidden" name="sid" value="<?php echo $song['song_id']; ?>">
        <input type="hidden" name="actionType" value="Delete">
@@ -45,7 +44,6 @@ while ($artist = $artists->fetch_assoc()) {
           </svg>
        </button>
       </form>
-  </div>
   
 <?php
 }
