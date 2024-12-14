@@ -10,7 +10,7 @@ if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
       If (insertAlbums($_POST['alNumber'], $_POST['alName'])) {
-        echo '<div class="alert alert-success" role="alert">Album added.</div>"';
+        echo '<div class="alert alert-success" role="alert">Album added.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
       }
