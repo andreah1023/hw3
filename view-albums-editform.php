@@ -23,11 +23,7 @@
           </div>
           <div class="mb-3">
             <label for="alName<?php echo $album['album_id']; ?>" class="form-label">Album name</label>
-<?php
-$albumList = selectAlbumsForInput();
-$selectedAlbum = $album['album_id'];
-include "view-album-input-list.php";
-?>
+            <input type="text" class="form-control" id="alName<?php echo $album['album_id']; ?>" name="alName" value="<?php echo $album['album_name']; ?>">
           </div>
             <input type="hidden" name="alid" value="<?php echo $album['album_id']; ?>">
             <input type="hidden" name="actionType" value="Edit">
