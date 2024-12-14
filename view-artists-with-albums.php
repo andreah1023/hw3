@@ -32,6 +32,10 @@ while ($artist = $artists->fetch_assoc()) {
       <p class="card-text"><small class="text-body-secondary">Office: <?php echo $artist['room_number']; ?></small></p>
     </div>
   </div>
+
+//new stuff
+  
+  
 <?php
 }
 ?>
