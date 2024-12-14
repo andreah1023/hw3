@@ -31,7 +31,7 @@ function selectAlbumsByArtist($aid) {
 function insertSongs($aid, $alid, $sYear, $sRoom) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `song` (`artist_id`, `album_id`, `release_year`, `room`) VALUES ('2', '4', '2015', '2334')");
+        $stmt = $conn->prepare("INSERT INTO `song` (`artist_id`, `album_id`, `release_year`, `room`) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("iiss", $aid, $alid, $sYear, $sRoom);
         $success = $stmt->execute();
         $conn->close();
