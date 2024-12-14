@@ -32,6 +32,7 @@
             <label for="sRoom" class="form-label">Song Room</label>
             <input type="text" class="form-control" id="sRoom" name="sRoom">
           </div>
+            <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
       </div>
