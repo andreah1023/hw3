@@ -25,7 +25,7 @@
             <label for="alName<?php echo $album['album_id']; ?>" class="form-label">Album name</label>
 <?php
 $albumList = selectAlbumsForInput();
-$selectedAlbum = $album['artist_id'];
+$selectedAlbum = $album['album_id'];
 include "view-album-input-list.php";
 ?>
           </div>
