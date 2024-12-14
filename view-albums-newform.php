@@ -24,6 +24,7 @@
             <label for="alName" class="form-label">Album name</label>
 <?php
 $albumList = selectAlbumsForInput();
+$selectedAlbum = 0;
 include "view-album-input-list.php";
 ?>
           </div>
