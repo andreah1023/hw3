@@ -23,7 +23,7 @@
           <div class="mb-3">
             <label for="alName" class="form-label">Album name</label>
 <?php
-$albumList = selectAlbumForInput();
+$albumList = selectAlbumsForInput();
 include "view-album-input-list.php";
 ?>
           </div>
